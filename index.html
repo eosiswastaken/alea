@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -35,14 +35,16 @@
 
     </header>
     <div id="wrapper">
-        <div id="chat">
-            <ul id="messages">
-                <li>[I] Game info</li>
-                <li>[C] Eosis: This is a chat message</li>
-                <li>[C] Eosis: This message is baaaad long damn :rofl:</li>
-            </ul>
-            <input type="text">
-        </div>
+        <form id="form" action="">
+            <div id="chat">
+                <ul id="messages">
+                    <li>[I] Game info</li>
+                    <li>[C] Eosis: This is a chat message</li>
+                    <li>[C] Eosis: This message is baaaad long damn :rofl:</li>
+                </ul>
+            </div>
+            <input id="input" autocomplete="off" type="text">
+        </form>
         <div id="content">
             <div class="tab" id="tab1">Tab1 Contents</div>
             <div class="tab" id="tab2">Tab2 Contents</div>
@@ -51,6 +53,7 @@
         </div>
     </div>
 </body>
-<script src="main.js"> </script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/main.js"> </script>
 
 </html>

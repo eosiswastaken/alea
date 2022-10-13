@@ -4,21 +4,28 @@ body {
     background-color: #191919;
 }
 
+form {
+    width: 15rem;
+    height: 90vh;
+}
+
 #chat {
     border-radius: 5px;
     background-color: aqua;
     width: 15rem;
-    height: 90vh;
+    height: 85vh;
     position: relative;
     background-color: #202020;
     color: #fbfbfb;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
-#chat input {
+#input {
     position: absolute;
-    bottom: 10px;
-    width: 85%;
-    left: 15px;
+    margin-top: 10px;
+    width: 14.4rem;
 }
 
 
