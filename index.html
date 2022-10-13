@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-
+    <link rel="stylesheet" href="style.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -22,7 +22,35 @@
 </head>
 
 <body>
+    <header>
+        <span id="title"> Alea </span>
+        <span id="nav">
+            <a class="noselect underline" id="tab1t" onclick="tabManagement('tab1')">Tab 1</a>
+            <a class="noselect underline" id="tab2t" onclick="tabManagement('tab2')"> Tab 2</a>
+            <a class="noselect underline" id="tab3t" onclick="tabManagement('tab3')"> Tab 3</a>
+            <a class="noselect underline" id="tab4t" onclick="tabManagement('tab4')"> Tab 4</a>
+        </span>
 
+
+
+    </header>
+    <div id="wrapper">
+        <div id="chat">
+            <ul id="messages">
+                <li>[I] Game info</li>
+                <li>[C] Eosis: This is a chat message</li>
+                <li>[C] Eosis: This message is baaaad long damn :rofl:</li>
+            </ul>
+            <input type="text">
+        </div>
+        <div id="content">
+            <div class="tab" id="tab1">Tab1 Contents</div>
+            <div class="tab" id="tab2">Tab2 Contents</div>
+            <div class="tab" id="tab3">Tab3 Contents</div>
+            <div class="tab" id="tab4">Tab4 Contents</div>
+        </div>
+    </div>
 </body>
+<script src="main.js"> </script>
 
 </html>
