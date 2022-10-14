@@ -9,22 +9,36 @@ var users = {}
 
 app.use(express.static('public'))
 
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html');
-});
 
-io.on('connection', (socket) => {
-    socket.on('chat message', (msg) => {
-        prep = users[socket.id] + " > " + msg
-        io.emit('chat message', prep);
-    });
-    socket.on('new user', (nick) => {
-        console.log(socket.id);
-        console.log(nick);
-        users[socket.id] = nick
-    })
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + "/index.html");
 });
 
 server.listen(3000, () => {
-    console.log('listening on port *:3000');
+    console.log('listening on port 3000');
 });
+
+
+io.on('connection', (socket) => {
+    console.log('A user connected !')
+    socket.on('chat message', (msg) => {
+        sendChatMessage(socket.id, msg);
+    });
+    socket.on('new user', (nick) => {
+        registerNewUser(socket.id, nick);
+    });
+    socket.on('disconnect', () => {
+        console.log('A user disconnected !')
+    });
+});
+
+
+function registerNewUser(id, nick) {
+    console.log(`New user logged in ! ID : ${id} / Name : ${nick}`);
+    users[id] = nick;
+}
+
+function sendChatMessage(id, msg) {
+    prep = `${users[id]} > ${msg}`
+    io.emit('chat message', prep)
+}

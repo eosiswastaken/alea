@@ -1,3 +1,8 @@
+var socket = io();
+var form = document.getElementById('form');
+var input = document.getElementById('input');
+var messages = document.getElementById('messages');
+
 function tabManagement(ee) {
     console.log(ee);
     tab = document.getElementById(ee);
@@ -12,10 +17,6 @@ function tabManagement(ee) {
     };
 }
 
-var socket = io();
-var form = document.getElementById('form');
-var input = document.getElementById('input');
-var messages = document.getElementById('messages');
 
 form.addEventListener('submit', function (e) {
     e.preventDefault();
