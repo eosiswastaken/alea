@@ -7,4 +7,5 @@ So I decided to make a game or something
 - Clone this repo
 - CD into it
 - run `node server.js`
+
 (I'll later deploy it on Netlify, but for now I use ngrok as it is enough for me)
