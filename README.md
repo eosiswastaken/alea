@@ -1,5 +1,6 @@
 # alea
-Idk I'm just learning Node, JS, HTML and CSS so I'm gonna make a game or something
+I am currently self learning SQL and NodeJS, and before that I had the basics of HTML, CSS and JS.
+So I decided to make a game or something
 
 # Deploy steps
 
